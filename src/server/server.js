@@ -25,15 +25,14 @@ import { isBefore, parseISO } from "date-fns";
 import routerEleccionUsuario from "../eleccionUsuario/routes/eleccion-usuario.router.js";
 import {
   changeEleccionesPorEleccionUsuarioModel,
-  changeEleccionesPorEleccionVotanteModel,
-  eleccionesPorEleccionVotanteModel
+  changeEleccionesPorEleccionVotanteModel
 } from "../eleccionVotante/models/eleccion-votante.model.js";
 
 const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://siie.fksas.com",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
   })
 );
@@ -46,7 +45,7 @@ app.use(compression());
 app.use(helmet());
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.header("Access-Control-Allow-Origin", "https://siie.fksas.com");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });

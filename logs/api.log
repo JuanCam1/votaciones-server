@@ -928,3 +928,4 @@
 2024-08-03 12:54:48 [32minfo[39m: {"verb":"PATCH", "path":"/usuario/updateNavbarUsuario/4", "params":"{"idUsuario":"4"}", "query":"{}", "body":"null"}
 2024-08-03 12:55:11 [32minfo[39m: {"verb":"GET", "path":"/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
 2024-08-03 12:55:44 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.9:3000"}
+2024-08-03 15:42:32 [32minfo[39m: {"message":"API Server listening at 191.95.129.9:3000"}
