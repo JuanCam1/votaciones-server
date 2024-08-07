@@ -10,7 +10,6 @@ const ENVIRONMENT = config.ENVIRONMENT;
 const DB_HOST = config.DB_HOST;
 const DB_USER = config.DB_USER;
 const DB_PASSWORD = config.DB_PASSWORD;
-const DEVELOPMENT_DB = config.DEVELOPMENT_DB;
 const APP_PORT_DB = config.APP_PORT_DB;
 
 function connect(done) {
