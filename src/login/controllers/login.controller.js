@@ -14,7 +14,9 @@ export const login = async (req, res) => {
 
     if (!user) return sendErrorResponse(res, 500, 301, "Error in database");
 
+    console.log("🚀 ~ login ~ antes:",user.estado_id);
     if (user.estado_id == 2) return sendErrorResponse(res, 401, 101, "User Inactivo");
+    console.log("🚀 ~ login ~ despues:",user.estado_id == 2);
 
     switch (user.result) {
       case -1: {
@@ -42,4 +44,5 @@ export const login = async (req, res) => {
     console.log("🚀 ~ login ~ data:", data);
     return sendErrorResponse(res, 500, 301, "Error in service or database", req, data);
   }
+    
 };
