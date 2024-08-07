@@ -66,19 +66,19 @@ app.use((err, req, res, next) => {
   next();
 });
 
-app.use("sgi/estado", routerEstado);
-app.use("sgi/role", routerRole);
-app.use("sgi/eleccion", routerEleccion);
-app.use("sgi/votante", routerVotantes);
-app.use("sgi/candidato", routerCandidato);
-app.use("sgi/usuario", routerUsuario);
-app.use("sgi/eleccion-votante", routerEleccionVotante);
-app.use("sgi/eleccion-candidato", routerEleccionCandidato);
-app.use("sgi/eleccion-usuario", routerEleccionUsuario);
-app.use("sgi/login", routerLogin);
-app.use("sgi/files", routerFiles);
-app.use("sgi/reportes", routerReporte);
-app.use("sgi/votacion", routerVotacion);
+app.use("/sgi/estado", routerEstado);
+app.use("/sgi/role", routerRole);
+app.use("/sgi/eleccion", routerEleccion);
+app.use("/sgi/votante", routerVotantes);
+app.use("/sgi/candidato", routerCandidato);
+app.use("/sgi/usuario", routerUsuario);
+app.use("/sgi/eleccion-votante", routerEleccionVotante);
+app.use("/sgi/eleccion-candidato", routerEleccionCandidato);
+app.use("/sgi/eleccion-usuario", routerEleccionUsuario);
+app.use("/sgi/login", routerLogin);
+app.use("/sgi/files", routerFiles);
+app.use("/sgi/reportes", routerReporte);
+app.use("/sgi/votacion", routerVotacion);
 
 cron.schedule("*/1 * * * *", async () => {
   try {
