@@ -32,7 +32,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://siie.fksas.com",
+    // origin: "https://siie.fksas.com",
+    origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
   })
 );
@@ -45,7 +46,7 @@ app.use(compression());
 app.use(helmet());
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://siie.fksas.com");
+  // res.header("Access-Control-Allow-Origin", "https://siie.fksas.com");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
