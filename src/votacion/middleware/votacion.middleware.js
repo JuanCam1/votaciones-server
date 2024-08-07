@@ -47,6 +47,6 @@ export const createVotoUsuario = [
 export const handleValidationErrorsVotacion = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty())
-    return sendErrorResponse(res, 400, 201, "Request has invalid data Votacion", req, {});
+    return sendErrorResponse(res, 400, 201, "Request has invalid data Votacion", req, null);
   next();
 };

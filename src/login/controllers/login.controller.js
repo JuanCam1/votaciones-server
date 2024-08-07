@@ -28,9 +28,10 @@ export const login = async (req, res) => {
 
     if (user.estado_id == 2) return sendErrorResponse(res, 401, 101, "User Inactivo", req, data);
 
-
     // if (user) {
-    const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
+    const password = data.password_usuario.trim();
+    const passwordHash = user.password_usuario.trim();
+    const checkPassword = bcrypt.compareSync(password, passwordHash);
     console.log("🚀 ~ login ~ checkPassword:", checkPassword);
 
     if (!checkPassword) {
