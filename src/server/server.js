@@ -66,7 +66,7 @@ app.use((err, req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
+app.get("/sgi/welcome", (req, res) => {
   res.status(200).send({
     message: "Welcome to the API"
   });
