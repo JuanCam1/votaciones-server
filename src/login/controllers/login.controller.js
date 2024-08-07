@@ -6,9 +6,11 @@ import bcrypt from "bcryptjs";
 
 export const login = async (req, res) => {
   const data = matchedData(req);
+  console.log("🚀 ~ login ~ data:", data);
 
   try {
     const [[[user]]] = await getByEmail(data.correo_usuario);
+    console.log("🚀 ~ login ~ user:", user);
 
     if (!user) return sendErrorResponse(res, 500, 301, "Error in database");
 
