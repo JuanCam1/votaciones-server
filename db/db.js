@@ -19,7 +19,7 @@ function connect(done) {
     user: DB_USER, 
     port: APP_PORT_DB,
     password: DB_PASSWORD,
-    database: ENVIRONMENT === "production" ? PRODUCTION_DB : DEVELOPMENT_DB,
+    database: ENVIRONMENT === "production" ? config.PRODUCTION_DB : config.DEVELOPMENT_DB,
     dateStrings: true,
     waitForConnections: true,
     connectionLimit: 10,
