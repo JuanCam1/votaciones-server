@@ -66,6 +66,13 @@ app.use((err, req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.status(200).send({
+    message: "Welcome to the API"
+  });
+});
+
+
 app.use("/sgi/estado", routerEstado);
 app.use("/sgi/role", routerRole);
 app.use("/sgi/eleccion", routerEleccion);
