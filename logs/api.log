@@ -929,3 +929,5 @@
 2024-08-03 12:55:11 [32minfo[39m: {"verb":"GET", "path":"/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
 2024-08-03 12:55:44 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.9:3000"}
 2024-08-03 15:42:32 [32minfo[39m: {"message":"API Server listening at 191.95.129.9:3000"}
+2024-08-06 23:30:52 [32minfo[39m: {"message":"API Server listening at 191.95.129.33:1338"}
+2024-08-06 23:31:23 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.33:1338"}
