@@ -28,7 +28,7 @@ export const login = async (req, res) => {
       }
     }
 
-    if (user.password_usuario) {
+    if (user) {
       const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
 
       if (!checkPassword) {
