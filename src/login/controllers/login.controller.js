@@ -12,29 +12,29 @@ export const login = async (req, res) => {
     const [[[user]]] = await getByEmail(data.correo_usuario);
     console.log("🚀 ~ login ~ user:", user);
 
-    if (!user) return sendErrorResponse(res, 500, 301, "Error in database");
-
-    console.log("🚀 ~ login ~ antes:",user.estado_id);
-    if (user.estado_id == 2) return sendErrorResponse(res, 401, 101, "User Inactivo");
-    console.log("🚀 ~ login ~ despues:",user.estado_id == 2);
+    if (!user) return sendErrorResponse(res, 500, 301, "Error in database", req, data);
 
     switch (user.result) {
       case -1: {
-        return sendErrorResponse(res, 500, 301, "Error in database");
+        return sendErrorResponse(res, 500, 301, "Error in database", req, data);
       }
       case -2: {
-        return sendErrorResponse(res, 404, 106, "User not found");
+        return sendErrorResponse(res, 404, 106, "User not found", req, data);
       }
       case -3: {
-        return sendErrorResponse(res, 404, 301, "Error in database");
+        return sendErrorResponse(res, 404, 301, "Error in database", req, data);
       }
     }
+
+    console.log("🚀 ~ login ~ antes:", user.estado_id);
+    if (user.estado_id == 2) return sendErrorResponse(res, 401, 101, "User Inactivo", req, data);
+    console.log("🚀 ~ login ~ despues:", user.estado_id == 2);
 
     if (user) {
       const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
 
       if (!checkPassword) {
-        return sendErrorResponse(res, 401, 106, "Datos incorrectos");
+        return sendErrorResponse(res, 401, 106, "Datos incorrectos",req,data);
       }
     }
 
@@ -44,5 +44,4 @@ export const login = async (req, res) => {
     console.log("🚀 ~ login ~ data:", data);
     return sendErrorResponse(res, 500, 301, "Error in service or database", req, data);
   }
-    
 };
