@@ -31,6 +31,9 @@ export const login = async (req, res) => {
     // if (user) {
     const password = data.password_usuario.trim();
     const passwordHash = user.password_usuario.trim();
+
+    console.log("password",password)
+    console.log("passwordHash",passwordHash)
     const checkPassword = bcrypt.compareSync(password, passwordHash);
     console.log("🚀 ~ login ~ checkPassword:", checkPassword);
 
