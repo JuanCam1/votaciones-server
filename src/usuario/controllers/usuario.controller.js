@@ -31,7 +31,6 @@ export const getImageUsuario = async (req, res) => {
 
   fs.access(filepath, fs.constants.F_OK, (err) => {
     if (err) {
-
       return sendErrorResponse(res, 404, 301, filepath, req, null);
     }
 
@@ -178,7 +177,6 @@ export const updateUsuarioController = async (req, res) => {
 
     const photo = newPhoto || usuario.foto_usuario;
 
-
     const [[[idUsuarioBD]]] = await updateUsuarioModel(
       idUsuario,
       cedulaValid,
@@ -203,7 +201,7 @@ export const updateUsuarioController = async (req, res) => {
       }
     }
 
-    return sendSuccesResponse(res, 202, "Usuario update", "admin", req,null, data);
+    return sendSuccesResponse(res, 202, "Usuario update", "admin", req, null, data);
   } catch (error) {
     return sendErrorResponse(res, 500, 402, "Error in service or database", req, data);
   }
@@ -440,7 +438,6 @@ export const updateNavbarUsuarioController = async (req, res) => {
       }
     }
 
-
     let hashedPassword;
     if (password_usuario && password_usuario.length > 0) {
       hashedPassword = await hashPassword(password_usuario);
@@ -475,7 +472,7 @@ export const updateNavbarUsuarioController = async (req, res) => {
       user.role_id
     );
 
-    if (!idUserDb) return sendErrorResponse(res, 500, 301, "Error in database");
+    if (!idUserDb) return sendErrorResponse(res, 500, 301, "Error in database", req, data);
 
     switch (idUserDb.result) {
       case -1: {
@@ -488,6 +485,6 @@ export const updateNavbarUsuarioController = async (req, res) => {
 
     return sendSuccesResponse(res, 202, "user update", "api", req, data);
   } catch (error) {
-    return sendErrorResponse(res, 500, 301, "Error in service or database");
+    return sendErrorResponse(res, 500, 301, "Error in service or database", req, data);
   }
 };

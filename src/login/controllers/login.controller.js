@@ -26,16 +26,16 @@ export const login = async (req, res) => {
       }
     }
 
-    console.log("🚀 ~ login ~ antes:", user.estado_id);
     if (user.estado_id == 2) return sendErrorResponse(res, 401, 101, "User Inactivo", req, data);
-    console.log("🚀 ~ login ~ despues:", user.estado_id == 2);
+
 
     // if (user) {
-      const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
+    const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
+    console.log("🚀 ~ login ~ checkPassword:", checkPassword);
 
-      if (!checkPassword) {
-        return sendErrorResponse(res, 401, 106, "Datos incorrectos",req,data);
-      }
+    if (!checkPassword) {
+      return sendErrorResponse(res, 401, 106, "Datos incorrectos", req, data);
+    }
     // }
 
     return res.status(200).send(JSON.stringify(createToken(user), null, 3));
