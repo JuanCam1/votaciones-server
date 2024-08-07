@@ -4,6 +4,7 @@ import { autoAdjustColumnWidth } from "../../utils/ajustColumn.js";
 import {
   countNoVotaronVotanteModel,
   countVotaronModel,
+  getEleccioneJuradoModel,
   getNoVotaronAllModel,
   getNoVotaronByEleccionIdModel,
   getNoVotaronUserByEleccionIdModel,
@@ -121,7 +122,6 @@ export const candidatosCountController = async (req, res) => {
         });
       }
     });
-
     return sendSuccesResponse(res, 200, combinedResults, "api", req, null, data);
   } catch (error) {
     return sendErrorResponse(res, 500, 301, "Error in service or database", req, data);
@@ -270,7 +270,6 @@ export const getDownloadExcelVotaronController = async (req, res) => {
       case -2:
         return sendErrorResponse(res, 404, 402, "usuarios no exist", req, data);
     }
-
     const combinedArray = [...votantes, ...usuarios];
 
     const workbook = await XlsxPopulate.fromBlankAsync();
@@ -305,7 +304,7 @@ export const getDownloadExcelVotaronController = async (req, res) => {
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
         .cell(rowIndex + 2, 3)
-        .value(eleccion.correo_corporativo_votante)
+        .value(eleccion.correo_corporativo_votante ?? eleccion.correo_usuario)
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
         .cell(rowIndex + 2, 4)
@@ -381,8 +380,8 @@ export const getDownloadExcelNoVotaronController = async (req, res) => {
         .value(eleccion.nombre_completo)
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
-        .cell(rowIndex + 2, 2)
-        .value(eleccion.correo_corporativo_votante)
+        .cell(rowIndex + 2, 3)
+        .value(eleccion.correo_corporativo_votante ?? eleccion.correo_usuario)
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
         .cell(rowIndex + 2, 3)
@@ -398,6 +397,31 @@ export const getDownloadExcelNoVotaronController = async (req, res) => {
       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     );
     res.send(buffer);
+  } catch (error) {
+    return sendErrorResponse(res, 500, 301, "Error in service or database", req, data);
+  }
+};
+
+export const getEleccionesJuradoController = async (req, res) => {
+  const data = matchedData(req);
+  try {
+    const { id_jurado } = data;
+
+    const [[elecciones]] = await getEleccioneJuradoModel(id_jurado);
+
+    if (!elecciones) {
+      return sendErrorResponse(res, 500, 301, "Error in database", req, data);
+    }
+
+    if (elecciones.result === -1) {
+      return sendErrorResponse(res, 500, 301, "Error in database", req, data);
+    }
+
+    if (elecciones.length == 0) {
+      return sendErrorResponse(res, 404, 301, "Is empty", req, data);
+    }
+
+    return sendSuccesResponse(res, 200, elecciones, "api", req, null, data);
   } catch (error) {
     return sendErrorResponse(res, 500, 301, "Error in service or database", req, data);
   }

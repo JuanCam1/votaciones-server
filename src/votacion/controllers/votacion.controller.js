@@ -32,7 +32,6 @@ export const createVotoUsuarioController = async (req, res) => {
       voto_blanco
     } = data;
 
-
     const direccion_ip = req.ip;
 
     const candidatoValid = candidato_id === "" ? null : candidato_id;
@@ -291,26 +290,26 @@ export const getVotanteByCedulaFechaController = async (req, res) => {
     const token = generateRandomNumbers();
     sendEmail(res, req, votante, token);
 
-    setTimeout(() => {
-      const deleteToken = async () => {
-        const [[[valueId]]] = await updateVotanteToken(votante.id_votante, null);
+    // setTimeout(() => {
+    //   const deleteToken = async () => {
+    //     const [[[valueId]]] = await updateVotanteToken(votante.id_votante, null);
 
-        if (!valueId) {
-          throw new Error("Error in database");
-        }
+    //     if (!valueId) {
+    //       throw new Error("Error in database");
+    //     }
 
-        switch (valueId.result) {
-          case -1: {
-            throw new Error("Error in database");
-          }
-          case -10: {
-            throw new Error("no exist");
-          }
-        }
-      };
+    //     switch (valueId.result) {
+    //       case -1: {
+    //         throw new Error("Error in database");
+    //       }
+    //       case -10: {
+    //         throw new Error("no exist");
+    //       }
+    //     }
+    //   };
 
-      deleteToken();
-    }, milliseconds);
+    //   deleteToken();
+    // }, milliseconds);
 
     return sendSuccesResponse(res, 200, votante, "api", req, null, data);
   } catch (error) {
@@ -345,26 +344,26 @@ export const getUsuarioByCedulaCorreoController = async (req, res) => {
     const token = generateRandomNumbers();
     sendEmailUsuario(res, req, usuario, token);
 
-    setTimeout(() => {
-      const deleteToken = async () => {
-        const [[[valueId]]] = await updateUsuarioToken(usuario.id_usuario, null);
+    // setTimeout(() => {
+    //   const deleteToken = async () => {
+    //     const [[[valueId]]] = await updateUsuarioToken(usuario.id_usuario, null);
 
-        if (!valueId) {
-          throw new Error("Error in database");
-        }
+    //     if (!valueId) {
+    //       throw new Error("Error in database");
+    //     }
 
-        switch (valueId.result) {
-          case -1: {
-            throw new Error("Error in database");
-          }
-          case -10: {
-            throw new Error("no exist");
-          }
-        }
-      };
+    //     switch (valueId.result) {
+    //       case -1: {
+    //         throw new Error("Error in database");
+    //       }
+    //       case -10: {
+    //         throw new Error("no exist");
+    //       }
+    //     }
+    //   };
 
-      deleteToken();
-    }, milliseconds);
+    //   deleteToken();
+    // }, milliseconds);
 
     return sendSuccesResponse(res, 200, usuario, "api", req, null, data);
   } catch (error) {

@@ -931,3 +931,185 @@
 2024-08-03 15:42:32 [32minfo[39m: {"message":"API Server listening at 191.95.129.9:3000"}
 2024-08-06 23:30:52 [32minfo[39m: {"message":"API Server listening at 191.95.129.33:1338"}
 2024-08-06 23:31:23 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.33:1338"}
+2024-08-07 15:26:37 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:29:27 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 15:30:16 [31merror[39m: {"verb":"POST", "path":"/sgi/eleccion/getEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}", "error":Is empty}
+2024-08-07 15:30:17 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 15:30:36 [31merror[39m: {"verb":"POST", "path":"/sgi/eleccion/getEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}", "error":Is empty}
+2024-08-07 15:30:36 [31merror[39m: {"verb":"POST", "path":"/sgi/eleccion/getEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}", "error":Is empty}
+2024-08-07 15:30:40 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 15:31:07 [32minfo[39m: {"verb":"POST", "path":"/sgi/eleccion/createEleccion", "params":"{}", "query":"{}", "body":"{"nombre_eleccion":"eleccion9","descripcion_eleccion":"eleccion9","fecha_ini_eleccion":"2024-08-07","fecha_fin_eleccion":"2024-08-07","hora_ini_eleccion":"05:30","hora_fin_eleccion":"21:37","estado_id":"1"}"}
+2024-08-07 15:31:11 [32minfo[39m: {"verb":"POST", "path":"/sgi/eleccion/getEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 15:31:13 [31merror[39m: {"verb":"POST", "path":"/sgi/candidato/getCandidatoAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}", "error":Is empty}
+2024-08-07 15:31:16 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 15:31:20 [32minfo[39m: {"verb":"POST", "path":"/sgi/candidato/createCandidato", "params":"{}", "query":"{}", "body":"{"nombre_candidato":"Daniel Muñoz","cedula_candidato":"10346783","estado_id":"1"}"}
+2024-08-07 15:32:25 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 15:32:47 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 15:32:49 [32minfo[39m: {"verb":"POST", "path":"/sgi/candidato/getCandidatoAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 15:32:50 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 15:32:56 [32minfo[39m: {"verb":"POST", "path":"/sgi/candidato/createCandidato", "params":"{}", "query":"{}", "body":"{"nombre_candidato":"Mayra Carreño Cardenas","cedula_candidato":"1095951834","estado_id":"1"}"}
+2024-08-07 15:32:59 [32minfo[39m: {"verb":"POST", "path":"/sgi/candidato/getCandidatoAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 15:33:01 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 15:33:03 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Activo", "params":"{"stateEleccion":"Activo"}", "query":"{}", "body":"{"stateEleccion":"Activo"}"}
+2024-08-07 15:33:03 [32minfo[39m: {"verb":"GET", "path":"/sgi/candidato/getCandidatoAllState/Activo", "params":"{"state":"Activo"}", "query":"{}", "body":"{"state":"Activo"}"}
+2024-08-07 15:33:13 [32minfo[39m: {"verb":"undefined", "path":"NaN", "params":"undefined", "query":"undefined", "body":"{"eleccion_id":"13","candidatos_id":[6,7],"estado_id":1}"}
+2024-08-07 15:33:17 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 15:33:18 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Activo", "params":"{"stateEleccion":"Activo"}", "query":"{}", "body":"{"stateEleccion":"Activo"}"}
+2024-08-07 15:33:25 [32minfo[39m: {"verb":"POST", "path":"/sgi/files/uploadFile/13", "params":"{"idEleccion":"13"}", "query":"{}", "body":"{"idEleccion":"13"}"}
+2024-08-07 15:33:31 [31merror[39m: {"verb":"POST", "path":"/sgi/eleccion-votante/getEleccionVotanteByIdEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}", "error":Is empty}
+2024-08-07 15:33:31 [31merror[39m: {"verb":"POST", "path":"/sgi/eleccion-votante/getEleccionVotanteByIdEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}", "error":Is empty}
+2024-08-07 15:34:50 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Activo", "params":"{"stateEleccion":"Activo"}", "query":"{}", "body":"{"stateEleccion":"Activo"}"}
+2024-08-07 15:35:10 [32minfo[39m: {"verb":"POST", "path":"/sgi/files/uploadFile/13", "params":"{"idEleccion":"13"}", "query":"{}", "body":"{"idEleccion":"13"}"}
+2024-08-07 15:35:17 [31merror[39m: {"verb":"POST", "path":"/sgi/eleccion-votante/getEleccionVotanteByIdEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}", "error":Is empty}
+2024-08-07 15:36:57 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:37:03 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:37:05 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Activo", "params":"{"stateEleccion":"Activo"}", "query":"{}", "body":"{"stateEleccion":"Activo"}"}
+2024-08-07 15:37:12 [32minfo[39m: {"verb":"POST", "path":"/sgi/files/uploadFile/13", "params":"{"idEleccion":"13"}", "query":"{}", "body":"{"idEleccion":"13"}"}
+2024-08-07 15:38:33 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:39:44 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Activo", "params":"{"stateEleccion":"Activo"}", "query":"{}", "body":"{"stateEleccion":"Activo"}"}
+2024-08-07 15:39:52 [32minfo[39m: {"verb":"POST", "path":"/sgi/files/uploadFile/13", "params":"{"idEleccion":"13"}", "query":"{}", "body":"{"idEleccion":"13"}"}
+2024-08-07 15:40:26 [31merror[39m: {"verb":"POST", "path":"/sgi/votante/getVotanteAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}", "error":Error in service or database}
+2024-08-07 15:40:39 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 15:40:41 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 15:40:44 [32minfo[39m: {"verb":"POST", "path":"/sgi/eleccion-candidato/candidatosPorEleccionCandidato/", "params":"{}", "query":"{}", "body":"{"id_eleccion":"13","state":"Todos"}"}
+2024-08-07 15:40:44 [32minfo[39m: {"verb":"POST", "path":"/sgi/eleccion-candidato/candidatosPorEleccionCandidato/", "params":"{}", "query":"{}", "body":"{"id_eleccion":"13","state":"Todos"}"}
+2024-08-07 15:40:48 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 15:41:39 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:41:40 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Activo", "params":"{"stateEleccion":"Activo"}", "query":"{}", "body":"{"stateEleccion":"Activo"}"}
+2024-08-07 15:41:47 [32minfo[39m: {"verb":"POST", "path":"/sgi/files/uploadFile/13", "params":"{"idEleccion":"13"}", "query":"{}", "body":"{"idEleccion":"13"}"}
+2024-08-07 15:43:07 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:43:17 [32minfo[39m: {"verb":"POST", "path":"/sgi/files/uploadFile/13", "params":"{"idEleccion":"13"}", "query":"{}", "body":"{"idEleccion":"13"}"}
+2024-08-07 15:48:23 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:53:31 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 15:54:07 [31merror[39m: {"verb":"POST", "path":"/sgi/votante/getVotanteAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}", "error":Error in service or database}
+2024-08-07 15:55:03 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:55:05 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 15:55:06 [31merror[39m: {"verb":"POST", "path":"/sgi/votante/getVotanteAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}", "error":Error in service or database}
+2024-08-07 15:56:09 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 15:58:40 [32minfo[39m: {"verb":"POST", "path":"/sgi/usuario/getUsuarioAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 15:58:42 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 15:58:42 [32minfo[39m: {"verb":"GET", "path":"/sgi/role/getRoleState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 16:07:23 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 16:07:28 [32minfo[39m: {"verb":"POST", "path":"/sgi/eleccion/getEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 16:07:30 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/changeStateEleccion/13", "params":"{"idEleccion":"13"}", "query":"{}", "body":"{"idEleccion":"13"}"}
+2024-08-07 16:07:31 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"POST", "path":"/sgi/reportes/getVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}"}
+2024-08-07 16:07:36 [32minfo[39m: {"verb":"POST", "path":"/sgi/reportes/getVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}"}
+2024-08-07 16:08:36 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:08:42 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:08:42 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:08:42 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:08:42 [32minfo[39m: {"verb":"POST", "path":"/sgi/reportes/getVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}"}
+2024-08-07 16:09:31 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:10:19 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:10:19 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:10:19 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:10:19 [32minfo[39m: {"verb":"POST", "path":"/sgi/reportes/getVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}"}
+2024-08-07 16:11:13 [31merror[39m: {"verb":"GET", "path":"/sgi/reportes/getDownloadExcelVotaron/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}", "error":Error in service or database}
+2024-08-07 16:12:08 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:12:11 [31merror[39m: {"verb":"GET", "path":"/sgi/reportes/getDownloadExcelVotaron/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}", "error":Error in service or database}
+2024-08-07 16:16:35 [31merror[39m: {"verb":"GET", "path":"/sgi/reportes/getDownloadExcelVotaron/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}", "error":Error in service or database}
+2024-08-07 16:17:21 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:18:37 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:19:37 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:19:45 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:19:45 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:19:45 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:19:45 [31merror[39m: {"verb":"POST", "path":"/sgi/reportes/getNoVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}", "error":Is empty}
+2024-08-07 16:21:17 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 16:21:17 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:21:17 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:21:17 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:21:17 [31merror[39m: {"verb":"POST", "path":"/sgi/reportes/getNoVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}", "error":Is empty}
+2024-08-07 16:27:02 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 16:44:39 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:47:14 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:48:22 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:48:36 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 16:51:50 [31merror[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/0", "params":"{"id_jurado":"0"}", "query":"{}", "body":"{"id_jurado":"0"}", "error":Is empty}
+2024-08-07 16:53:07 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:53:21 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:53:44 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:53:59 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:54:05 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:54:08 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:54:24 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:54:34 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:54:58 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:55:45 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:55:59 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:56:47 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:57:03 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:57:11 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:57:18 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:57:28 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:57:34 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/getEleccionByIdJurado/9", "params":"{"id_jurado":"9"}", "query":"{}", "body":"{"id_jurado":"9"}"}
+2024-08-07 16:57:45 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:57:46 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:58:18 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 16:58:28 [32minfo[39m: {"verb":"POST", "path":"/sgi/usuario/getUsuarioAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 16:58:31 [32minfo[39m: {"verb":"GET", "path":"/sgi/estado/getEstadoState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 16:58:31 [32minfo[39m: {"verb":"GET", "path":"/sgi/role/getRoleState", "params":"{}", "query":"{}", "body":"null"}
+2024-08-07 16:59:17 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 16:59:37 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:59:37 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:59:37 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:59:37 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:59:37 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 16:59:37 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:18 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 17:00:18 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:18 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:18 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:20 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:20 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:20 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:25 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 17:00:28 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:28 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:28 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:28 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:28 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:00:28 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:01:24 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 17:01:24 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:01:24 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:01:24 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:01:26 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:01:26 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:01:26 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:03:53 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 17:03:53 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:03:53 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:03:53 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:03:58 [32minfo[39m: {"verb":"POST", "path":"/sgi/eleccion/getEleccionAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 17:04:22 [32minfo[39m: {"verb":"POST", "path":"/sgi/candidato/getCandidatoAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 17:06:09 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 17:06:09 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 17:06:12 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:06:12 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:06:12 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:06:12 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:06:12 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:06:13 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:06:13 [32minfo[39m: {"verb":"POST", "path":"/sgi/reportes/getVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}"}
+2024-08-07 17:06:13 [32minfo[39m: {"verb":"POST", "path":"/sgi/reportes/getVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}"}
+2024-08-07 17:08:04 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Inactivo", "params":"{"stateEleccion":"Inactivo"}", "query":"{}", "body":"{"stateEleccion":"Inactivo"}"}
+2024-08-07 17:08:04 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/pudieronVotar/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:08:04 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/votaronCount/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:08:04 [32minfo[39m: {"verb":"GET", "path":"/sgi/reportes/candidatosVotos/13", "params":"{"id_eleccion":"13"}", "query":"{}", "body":"{"id_eleccion":"13"}"}
+2024-08-07 17:08:04 [32minfo[39m: {"verb":"POST", "path":"/sgi/reportes/getVotaronAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0,"id_eleccion":"13"}"}
+2024-08-07 17:08:36 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 17:08:37 [32minfo[39m: {"verb":"GET", "path":"/sgi/eleccion/getEleccionState/Todos", "params":"{"stateEleccion":"Todos"}", "query":"{}", "body":"{"stateEleccion":"Todos"}"}
+2024-08-07 17:08:37 [32minfo[39m: {"verb":"POST", "path":"/sgi/candidato/getCandidatoAll", "params":"{}", "query":"{}", "body":"{"limit":10,"offset":0}"}
+2024-08-07 17:09:28 [31merror[39m: {"verb":"POST", "path":"/sgi/votacion/getVotanteByCedulaFecha", "params":"{}", "query":"{}", "body":"{"cedula_votante":"4735443","fecha_expedicion_votante":"2002-05-30"}", "error":Votante no exist}
+2024-08-07 17:09:40 [31merror[39m: {"verb":"POST", "path":"/sgi/votacion/getVotanteByCedulaFecha", "params":"{}", "query":"{}", "body":"{"cedula_votante":"4735443","fecha_expedicion_votante":"1984-05-30"}", "error":Error in service or database}
+2024-08-07 17:14:31 [32minfo[39m: {"message":"API Server listening at 191.95.129.65:3000"}
+2024-08-07 17:15:06 [31merror[39m: {"verb":"POST", "path":"/sgi/votacion/getVotanteByCedulaFecha", "params":"{}", "query":"{}", "body":"{"cedula_votante":"4735443","fecha_expedicion_votante":"1984-05-30"}", "error":Error in service or database}
+2024-08-07 17:16:38 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.65:3000"}

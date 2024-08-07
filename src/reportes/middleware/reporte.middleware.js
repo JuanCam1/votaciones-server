@@ -2,6 +2,7 @@ import { check, validationResult } from "express-validator";
 import { sendErrorResponse } from "../../utils/sendResponse.js";
 
 export const validateReportes = [check("id_eleccion").exists()];
+export const validateReportesJurado = [check("id_jurado").exists()];
 
 const fields = ["id_eleccion"];
 export const validateVotantesAll = [

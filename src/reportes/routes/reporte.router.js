@@ -1,6 +1,20 @@
 import { Router } from "express";
-import { handleValidationErrorsReporte, validateReportes, validateVotantesAll } from "../middleware/reporte.middleware.js";
-import { candidatosCountController, getDownloadExcelNoVotaronController, getDownloadExcelVotaronController, getNoVotaronAllController, getVotaronAllController, pudieronVotarController, votaronCountController } from "../controllers/reporte.controller.js";
+import {
+  handleValidationErrorsReporte,
+  validateReportes,
+  validateReportesJurado,
+  validateVotantesAll
+} from "../middleware/reporte.middleware.js";
+import {
+  candidatosCountController,
+  getDownloadExcelNoVotaronController,
+  getDownloadExcelVotaronController,
+  getEleccionesJuradoController,
+  getNoVotaronAllController,
+  getVotaronAllController,
+  pudieronVotarController,
+  votaronCountController
+} from "../controllers/reporte.controller.js";
 import { ensureJWTAuth } from "../../services/jwt.js";
 import { hasType } from "../../services/permission.js";
 
@@ -41,7 +55,6 @@ routerReporte.post(
   getNoVotaronAllController
 );
 
-
 routerReporte.get(
   "/getDownloadExcelVotaron/:id_eleccion",
   ensureJWTAuth,
@@ -58,6 +71,14 @@ routerReporte.get(
   validateReportes,
   handleValidationErrorsReporte,
   getDownloadExcelNoVotaronController
+);
+
+routerReporte.get(
+  "/getEleccionByIdJurado/:id_jurado",
+  ensureJWTAuth,
+  validateReportesJurado,
+  handleValidationErrorsReporte,
+  getEleccionesJuradoController
 );
 
 export default routerReporte;

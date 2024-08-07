@@ -124,3 +124,12 @@ export const getNoVotaronUserByEleccionIdModel = async (id_eleccion) => {
   const result = await promisePool.query("CALL strp_NoVotaronUser_All(?)", values);
   return result;
 };
+
+
+export const getEleccioneJuradoModel = async (id_jurado) => {
+  const values = [id_jurado];
+
+  const promisePool = db.get().promise();
+  const result = await promisePool.query("CALL strp_EleccionJurado(?)", values);
+  return result;
+}
