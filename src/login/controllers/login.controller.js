@@ -17,18 +17,23 @@ export const login = async (req, res) => {
     if (user.estado_id == 2) return sendErrorResponse(res, 401, 101, "User Inactivo");
 
     switch (user.result) {
-      case -1:
+      case -1: {
         return sendErrorResponse(res, 500, 301, "Error in database");
-      case -2:
+      }
+      case -2: {
         return sendErrorResponse(res, 404, 106, "User not found");
-      case -3:
+      }
+      case -3: {
         return sendErrorResponse(res, 404, 301, "Error in database");
+      }
     }
 
-    const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
+    if (user.password_usuario) {
+      const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
 
-    if (!checkPassword) {
-      return sendErrorResponse(res, 401, 106, "Datos incorrectos");
+      if (!checkPassword) {
+        return sendErrorResponse(res, 401, 106, "Datos incorrectos");
+      }
     }
 
     return res.status(200).send(JSON.stringify(createToken(user), null, 3));
