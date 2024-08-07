@@ -31,7 +31,7 @@ export const validateUpdateEleccion = [
   check("fecha_ini_eleccion").optional(),
   check("fecha_fin_eleccion").optional(),
   check("hora_ini_eleccion").optional(),
-  check("hora_fin_eleccion").optional(),
+  check("hora_fin_eleccion").optional()
 ];
 
 export const validateEleccionById = [
@@ -82,6 +82,6 @@ export const handleValidationErrorsEleccion = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty())
-    return sendErrorResponse(res, 400, 201, "Request has invalid data Eleccion");
+    return sendErrorResponse(res, 400, 201, "Request has invalid data Eleccion", req, null);
   next();
 };

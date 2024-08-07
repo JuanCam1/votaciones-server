@@ -7,17 +7,17 @@ export const getRoleAllStateController = async (req, res) => {
   try {
     const [[roles]] = await getRoleAllByStateModel();
 
-    if (!roles) return sendErrorResponse(res, 500, 301, "Error in database", req);
+    if (!roles) return sendErrorResponse(res, 500, 301, "Error in database", req, null);
 
     switch (roles.result) {
       case -1:
-        return sendErrorResponse(res, 500, 301, "Error in database", req);
+        return sendErrorResponse(res, 500, 301, "Error in database", req, null);
       case -2:
-        return sendErrorResponse(res, 404, 402, "No hay roles", req);
+        return sendErrorResponse(res, 404, 402, "No hay roles", req, null);
     }
 
     return sendSuccesResponse(res, 200, roles, "api", req, null);
   } catch (error) {
-    return sendErrorResponse(res, 500, 301, "Error in service or database", req);
+    return sendErrorResponse(res, 500, 301, "Error in service or database", req, null);
   }
 };

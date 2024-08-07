@@ -7,17 +7,17 @@ export const getEstadoAllStateController = async (req, res) => {
   try {
     const [[estados]] = await getEstdoAllByStateModel();
 
-    if (!estados) return sendErrorResponse(res, 500, 301, "Error in database", req);
+    if (!estados) return sendErrorResponse(res, 500, 301, "Error in database", req, null);
 
     switch (estados.result) {
       case -1:
-        return sendErrorResponse(res, 500, 301, "Error in database", req);
+        return sendErrorResponse(res, 500, 301, "Error in database", req, null);
       case -2:
-        return sendErrorResponse(res, 404, 402, "No hay estados", req);
+        return sendErrorResponse(res, 404, 402, "No hay estados", req, null);
     }
 
     return sendSuccesResponse(res, 200, estados, "api", req, null);
   } catch (error) {
-    return sendErrorResponse(res, 500, 301, "Error in service or database", req);
+    return sendErrorResponse(res, 500, 301, "Error in service or database", req, null);
   }
 };

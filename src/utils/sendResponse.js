@@ -1,7 +1,7 @@
 import { logger } from "../services/apiLogger.js";
 import { loggerAdmin } from "../services/adminLogger.js";
 
-export const sendErrorResponse = (res, status, code, message, req = null, data = {}) => {
+export const sendErrorResponse = (res, status, code, message, req = null, data = null) => {
   logger.error(
     `{"verb":"${req.method}", "path":"${req.baseUrl + req.path}", "params":"${JSON.stringify(
       req.params

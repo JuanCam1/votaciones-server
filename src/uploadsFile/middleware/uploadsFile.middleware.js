@@ -10,6 +10,6 @@ export const handleValidationErrorsUpload = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty())
-    return sendErrorResponse(res, 400, 201, "Request has invalid data Eleccion");
+    return sendErrorResponse(res, 400, 201, "Request has invalid data Eleccion",req,null);
   next();
 };

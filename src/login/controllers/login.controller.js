@@ -30,13 +30,13 @@ export const login = async (req, res) => {
     if (user.estado_id == 2) return sendErrorResponse(res, 401, 101, "User Inactivo", req, data);
     console.log("🚀 ~ login ~ despues:", user.estado_id == 2);
 
-    if (user) {
+    // if (user) {
       const checkPassword = bcrypt.compareSync(data.password_usuario, user.password_usuario);
 
       if (!checkPassword) {
         return sendErrorResponse(res, 401, 106, "Datos incorrectos",req,data);
       }
-    }
+    // }
 
     return res.status(200).send(JSON.stringify(createToken(user), null, 3));
   } catch (err) {

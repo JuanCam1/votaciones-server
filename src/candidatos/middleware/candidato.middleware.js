@@ -70,6 +70,6 @@ export const handleValidationErrorsCandidato = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty())
-    return sendErrorResponse(res, 400, 201, "Request has invalid data Candidato");
+    return sendErrorResponse(res, 400, 201, "Request has invalid data Candidato", req, null);
   next();
 };

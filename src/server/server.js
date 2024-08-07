@@ -62,7 +62,7 @@ app.use((req, res, next) => {
 
 app.use((err, req, res, next) => {
   if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
-    return sendErrorResponse(res, 400, 201, "Request has invalid data");
+    return sendErrorResponse(res, 400, 201, "Request has invalid data",req,null);
   }
   next();
 });

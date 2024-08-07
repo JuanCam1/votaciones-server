@@ -66,6 +66,6 @@ export const handleValidationErrorsEleccionUsuario = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty())
-    return sendErrorResponse(res, 400, 201, "Request has invalid data EleccionUsuario");
+    return sendErrorResponse(res, 400, 201, "Request has invalid data EleccionUsuario", req, null);
   next();
 };

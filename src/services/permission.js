@@ -7,11 +7,18 @@ export const hasType = (types) => {
     const payload = JSON.parse(dataHeader);
 
     if (Object.values(payload).includes("")) {
-      return sendErrorResponse(res, 403, 107, "Error in authentification 2");
+      return sendErrorResponse(res, 403, 107, "Error in authentification ", req, null);
     }
 
     if (!types.includes(payload.nombre_role)) {
-      return sendErrorResponse(res, 401, 105, "User is not authorized to perform this action");
+      return sendErrorResponse(
+        res,
+        401,
+        105,
+        "User is not authorized to perform this action",
+        req,
+        null
+      );
     }
     next();
   };

@@ -25,11 +25,7 @@ export const validateIdEleccion = [
   check("id_eleccion").exists().withMessage("id_eleccion is required")
 ];
 
-const fields = [
-  "nombre_eleccion",
-  "cedula_candidato",
-  "nombre_candidato"
-];
+const fields = ["nombre_eleccion", "cedula_candidato", "nombre_candidato"];
 
 export const validateEleccionCandidatoAll = [
   check("limit").optional().isInt({ min: 1 }).withMessage("Should be an integer greater than 0"),
@@ -70,6 +66,13 @@ export const handleValidationErrorsEleccionCandidato = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty())
-    return sendErrorResponse(res, 400, 201, "Request has invalid data EleccionCandidato");
+    return sendErrorResponse(
+      res,
+      400,
+      201,
+      "Request has invalid data EleccionCandidato",
+      req,
+      null
+    );
   next();
 };

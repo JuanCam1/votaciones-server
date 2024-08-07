@@ -14,6 +14,7 @@ export const validateLogin = [
 export const handleValidationErrorsLogin = (req, res, next) => {
   const errors = validationResult(req);
 
-  if (!errors.isEmpty()) return sendErrorResponse(res, 400, 201, "Request has invalid data Login");
+  if (!errors.isEmpty())
+    return sendErrorResponse(res, 400, 201, "Request has invalid data Login", req, null);
   next();
 };

@@ -26,6 +26,6 @@ export const handleValidationErrorsReporte = (req, res, next) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty())
-    return sendErrorResponse(res, 400, 201, "Request has invalid data Reporte", null, null);
+    return sendErrorResponse(res, 400, 201, "Request has invalid data Reporte", req, null);
   next();
 };
