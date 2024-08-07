@@ -31,6 +31,7 @@ export const login = async (req, res) => {
 
     return res.status(200).send(JSON.stringify(createToken(user), null, 3));
   } catch (err) {
+    console.log("🚀 ~ login ~ err:", err);
     return sendErrorResponse(res, 500, 301, "Error in service or database", req, data);
   }
 };
