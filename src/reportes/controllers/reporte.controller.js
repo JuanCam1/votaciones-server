@@ -6,8 +6,10 @@ import {
   countVotaronModel,
   getNoVotaronAllModel,
   getNoVotaronByEleccionIdModel,
+  getNoVotaronUserByEleccionIdModel,
   getVotaronAllModel,
   getVotaronByEleccionIdModel,
+  getVotaronUserByEleccionIdModel,
   usuariosEleccionVotanteCountAllModel,
   votantesEleccionVotanteCountAllModel,
   votoEleccionUsuarioCandidatoCountAllModel,
@@ -258,6 +260,19 @@ export const getDownloadExcelVotaronController = async (req, res) => {
         return sendErrorResponse(res, 404, 402, "votantes no exist", req, data);
     }
 
+    const [[usuarios]] = await getVotaronUserByEleccionIdModel(data.id_eleccion);
+
+    if (!usuarios) return sendErrorResponse(res, 500, 301, "Error in database", req, data);
+
+    switch (usuarios.result) {
+      case -1:
+        return sendErrorResponse(res, 500, 301, "Error in database", req, data);
+      case -2:
+        return sendErrorResponse(res, 404, 402, "usuarios no exist", req, data);
+    }
+
+    const combinedArray = [...votantes, ...usuarios];
+
     const workbook = await XlsxPopulate.fromBlankAsync();
     const sheet = workbook.sheet(0);
     sheet.row(1).style("bold", true);
@@ -279,7 +294,7 @@ export const getDownloadExcelVotaronController = async (req, res) => {
 
     autoAdjustColumnWidth(sheet);
 
-    votantes.forEach((eleccion, rowIndex) => {
+    combinedArray.forEach((eleccion, rowIndex) => {
       sheet
         .cell(rowIndex + 2, 1)
         .value(eleccion.nombre_completo)
@@ -294,7 +309,7 @@ export const getDownloadExcelVotaronController = async (req, res) => {
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
         .cell(rowIndex + 2, 4)
-        .value(eleccion.telefono_votante)
+        .value(eleccion.telefono_votante ?? "000-000")
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
         .cell(rowIndex + 2, 5)
@@ -333,6 +348,19 @@ export const getDownloadExcelNoVotaronController = async (req, res) => {
         return sendErrorResponse(res, 404, 402, "votantes no exist", req, data);
     }
 
+    const [[usuarios]] = await getNoVotaronUserByEleccionIdModel(data.id_eleccion);
+
+    if (!usuarios) return sendErrorResponse(res, 500, 301, "Error in database", req, data);
+
+    switch (usuarios.result) {
+      case -1:
+        return sendErrorResponse(res, 500, 301, "Error in database", req, data);
+      case -2:
+        return sendErrorResponse(res, 404, 402, "usuarios no exist", req, data);
+    }
+
+    const combinedArray = [...votantes, ...usuarios];
+
     const workbook = await XlsxPopulate.fromBlankAsync();
     const sheet = workbook.sheet(0);
     sheet.row(1).style("bold", true);
@@ -347,7 +375,7 @@ export const getDownloadExcelNoVotaronController = async (req, res) => {
 
     autoAdjustColumnWidth(sheet);
 
-    votantes.forEach((eleccion, rowIndex) => {
+    combinedArray.forEach((eleccion, rowIndex) => {
       sheet
         .cell(rowIndex + 2, 1)
         .value(eleccion.nombre_completo)
@@ -358,7 +386,7 @@ export const getDownloadExcelNoVotaronController = async (req, res) => {
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
         .cell(rowIndex + 2, 3)
-        .value(eleccion.telefono_votante)
+        .value(eleccion.telefono_votante ?? "000-000")
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
     });
 

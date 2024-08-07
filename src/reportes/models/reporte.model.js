@@ -101,10 +101,26 @@ export const getVotaronByEleccionIdModel = async (id_eleccion) => {
   return result;
 };
 
+export const getVotaronUserByEleccionIdModel = async (id_eleccion) => {
+  const values = [id_eleccion];
+
+  const promisePool = db.get().promise();
+  const result = await promisePool.query("CALL strp_VotaronUser_All(?)", values);
+  return result;
+};
+
 export const getNoVotaronByEleccionIdModel = async (id_eleccion) => {
   const values = [id_eleccion];
 
   const promisePool = db.get().promise();
   const result = await promisePool.query("CALL strp_NoVotaron_All(?)", values);
+  return result;
+};
+
+export const getNoVotaronUserByEleccionIdModel = async (id_eleccion) => {
+  const values = [id_eleccion];
+
+  const promisePool = db.get().promise();
+  const result = await promisePool.query("CALL strp_NoVotaronUser_All(?)", values);
   return result;
 };

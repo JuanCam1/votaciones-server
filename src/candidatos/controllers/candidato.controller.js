@@ -360,7 +360,7 @@ export const getDownloadExcelCandidatoController = async (req, res) => {
         .value(candidato.cedula_candidato)
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
       sheet
-        .cell(rowIndex + 2, 5)
+        .cell(rowIndex + 2, 4)
         .value(candidato.nombre_estado)
         .style({ horizontalAlignment: "center", verticalAlignment: "center" });
     });
