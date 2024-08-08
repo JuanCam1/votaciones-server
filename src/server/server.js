@@ -27,6 +27,7 @@ import {
   changeEleccionesPorEleccionUsuarioModel,
   changeEleccionesPorEleccionVotanteModel
 } from "../eleccionVotante/models/eleccion-votante.model.js";
+import { toZonedTime } from "date-fns-tz";
 
 const app = express();
 
@@ -62,7 +63,7 @@ app.use((req, res, next) => {
 
 app.use((err, req, res, next) => {
   if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
-    return sendErrorResponse(res, 400, 201, "Request has invalid data",req,null);
+    return sendErrorResponse(res, 400, 201, "Request has invalid data", req, null);
   }
   next();
 });
@@ -72,7 +73,6 @@ app.get("/sgi/welcome", (req, res) => {
     message: "Welcome to the API"
   });
 });
-
 
 app.use("/sgi/estado", routerEstado);
 app.use("/sgi/role", routerRole);
@@ -91,9 +91,12 @@ app.use("/sgi/votacion", routerVotacion);
 cron.schedule("*/1 * * * *", async () => {
   try {
     const [[elecciones]] = await getEleccionAllByStateModel("Activo");
+    const timeZone = "America/Bogota";
+    const now = toZonedTime(new Date(), timeZone);
 
-    const now = new Date();
     for (const eleccion of elecciones) {
+      console.log(eleccion);
+      console.log(now);
       const fechaFin = parseISO(`${eleccion.fecha_fin_eleccion}T${eleccion.hora_fin_eleccion}:00`);
       if (!isBefore(now, fechaFin)) {
         try {
