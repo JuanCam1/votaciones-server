@@ -1118,3 +1118,7 @@
 2024-08-07 20:43:58 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.52:3000"}
 2024-08-07 20:44:11 [32minfo[39m: {"message":"API Server listening at 191.95.129.52:3000"}
 2024-08-07 21:03:32 [32minfo[39m: {"message":"API Server listening at 191.95.129.52:3000"}
+2024-08-07 21:11:43 [32minfo[39m: {"message":"API Server listening at 191.95.129.52:1338"}
+2024-08-07 21:14:34 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.52:1338"}
+2024-08-07 21:14:43 [32minfo[39m: {"message":"API Server listening at 191.95.129.52:1338"}
+2024-08-07 21:15:07 [32minfo[39m: {"message":"Cleanup succesfull, exiting API Server at 191.95.129.52:1338"}
